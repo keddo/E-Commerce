@@ -1,5 +1,5 @@
 import firebase from "firebase";
-//import "firebase/firestore";
+require("firebase/firestore");
 var config = {
   apiKey: "AIzaSyDvE2HXTDvsLcXUi00S4Iw0hyLgvYDbA4w",
   authDomain: "e-commerce-88c74.firebaseapp.com",
@@ -8,4 +8,7 @@ var config = {
   storageBucket: "e-commerce-88c74.appspot.com",
   messagingSenderId: "154396194003"
 };
-export const fb = firebase.initializeApp(config);
+const fb = firebase.initializeApp(config);
+const db = firebase.firestore();
+
+export { fb, db };
